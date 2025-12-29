@@ -13,6 +13,7 @@ public class Adopter {
     public String getCity() {
         return city;
     }
+
     public void setName(String name) {
         this.name = name;
     }
