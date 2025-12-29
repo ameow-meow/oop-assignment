@@ -49,6 +49,7 @@ public class Main {
         dog.makeSound();
         cat.makeSound();
 
+
         System.out.println("\nComparing Pets:");
         System.out.println(pet1.equals(pet2));
         System.out.println(pet1.equals(pet3));
