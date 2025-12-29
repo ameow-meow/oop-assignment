@@ -2,6 +2,7 @@ import java.util.Objects;
 public class Adopter {
     private String name;
     private String city;
+
     public Adopter(String name, String city) {
         this.name = name;
         this.city = city;

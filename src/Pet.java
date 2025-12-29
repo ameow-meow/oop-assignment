@@ -1,5 +1,5 @@
 import java.util.Objects;
-public class Pet {
+public abstract class Pet implements Soundable {
     private String name;
     private int age;
     public Pet(String name, int age) {
@@ -18,6 +18,13 @@ public class Pet {
     public void setAge(int age) {
         this.age = age;
     }
+    public void setAge(int age, String unit) {
+        if (unit.equals("months")) {
+            this.age = age / 12;
+        } else {
+            this.age = age;
+        }
+    }
     @Override
     public String toString() {
         return "Pet{name='" + name + "', age=" + age + "}";
@@ -33,8 +40,10 @@ public class Pet {
     public int hashCode() {
         return Objects.hash(name, age);
     }
+    @Override
+    public abstract void makeSound();
 
-    public void makeSound() {
-        System.out.println("Pet makes a sound");
+    public final void printInfo() {
+        System.out.println("This is a final method. It cannot be overridden.");
     }
 }
