@@ -1,3 +1,6 @@
+import daos.AdopterDAO;
+import daos.PetDAO;
+
 import java.util.ArrayList;
 import java.util.List;
 public class Main {
@@ -55,39 +58,32 @@ public class Main {
 
         pet1.setAge(5, "months");
 
-        // ========== DATABASE OPERATIONS ==========
         System.out.println("\n========== DATABASE ==========\n");
 
         PetDAO petDAO = new PetDAO();
         AdopterDAO adopterDAO = new AdopterDAO();
 
-        // Добавляем питомцев в БД
         System.out.println("--- INSERT Operations ---");
         petDAO.insertPet("Archi", 3, "Dog");
         petDAO.insertPet("Fiona", 1, "Cat");
         petDAO.insertPet("Rex", 2, "Dog");
 
-        // Читаем всех питомцев из БД
         System.out.println("\n--- READ Operations ---");
         System.out.println("All Pets from Database:");
         for (String pet : petDAO.getAllPets()) {
             System.out.println("  " + pet);
         }
 
-        // Обновляем питомца
         System.out.println("\n--- UPDATE Operations ---");
         petDAO.updatePet(1, "Archi Updated", 4);
 
-        // Удаляем питомца
         System.out.println("\n--- DELETE Operations ---");
         petDAO.deletePet(3);
 
-        // Добавляем усыновителя
         System.out.println("\n--- Adopters ---");
         adopterDAO.insertAdopter("Amina", "Karaganda");
         adopterDAO.insertAdopter("Bolat", "Astana");
 
-        // Читаем усыновителей
         System.out.println("\nAll Adopters from Database:");
         for (String adopter : adopterDAO.getAllAdopters()) {
             System.out.println("  " + adopter);
