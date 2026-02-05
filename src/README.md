@@ -1,4 +1,4 @@
-# Pet Adoption Management System
+# objects.Pet Adoption Management System
 
 ## Project Description
 A pet adoption management system that allows managing different types of pets (dogs, cats), sorting them by age, filtering young pets, and managing adopters and shelters.
@@ -6,14 +6,14 @@ A pet adoption management system that allows managing different types of pets (d
 ## Project Structure
 
 ### Classes:
-- Pet (abstract class) - base class for all pets
-- Dog - dog class (inherits from Pet)
-- Cat - cat class (inherits from Pet)
-- Adopter - class for people who want to adopt pets
-- Shelter - class for animal shelters
+- objects.Pet (abstract class) - base class for all pets
+- petTypes.Dog - dog class (inherits from objects.Pet)
+- petTypes.Cat - cat class (inherits from objects.Pet)
+- objects.Adopter - class for people who want to adopt pets
+- objects.Shelter - class for animal shelters
 
 ### Interfaces:
-- Soundable - interface for animals that can make sounds
+- objects.Soundable - interface for animals that can make sounds
 
 ## How to Run
 
@@ -26,56 +26,56 @@ A pet adoption management system that allows managing different types of pets (d
 ## Assignment Requirements Completed
 
 ### OOP Concepts:
-- Inheritance: Dog and Cat inherit from Pet
+- Inheritance: petTypes.Dog and petTypes.Cat inherit from objects.Pet
 - Encapsulation: All fields are private with getter/setter methods
 - Polymorphism: makeSound() method is overridden in subclasses
-- Abstraction: Abstract Pet class with abstract makeSound() method
+- Abstraction: Abstract objects.Pet class with abstract makeSound() method
 
 ### Additional Features:
-- Soundable interface with makeSound() method
+- objects.Soundable interface with makeSound() method
 - equals() and hashCode() methods overridden
 - toString() method overridden
 - Final method usage (printInfo)
 - Method overloading (setAge with different parameters)
-- Pet sorting by age
+- objects.Pet sorting by age
 - Young pets filtering (age <= 2)
 
 ## Usage Examples
 
 ### Creating Pets:
 
-Dog pet1 = new Dog("Archi", 3);
-Pet pet2 = new Cat("Fiona", 1);
+petTypes.Dog pet1 = new petTypes.Dog("Archi", 3);
+objects.Pet pet2 = new petTypes.Cat("Fiona", 1);
 Making Sounds:
 undefined
-Dog dog = new Dog("Sharik", 4);
+petTypes.Dog dog = new petTypes.Dog("Sharik", 4);
 dog.makeSound(); // Output: "Woof"
 
-Cat cat = new Cat("Murka", 2);
+petTypes.Cat cat = new petTypes.Cat("Murka", 2);
 cat.makeSound(); // Output: "Meow"
-Creating Adopter and Shelter:
+Creating objects.Adopter and objects.Shelter:
 undefined
-Adopter adopter = new Adopter("Amina", "Karaganda");
-Shelter shelter = new Shelter("Happy Tails", "Astana");
+objects.Adopter adopter = new objects.Adopter("Amina", "Karaganda");
+objects.Shelter shelter = new objects.Shelter("Happy Tails", "Astana");
 Setting Age with Units:
 undefined
 pet1.setAge(5, "months"); // Converts months to years
 Output Example
 undefined
 All Pets:
-Pet{name='Fiona', age=1}
-Pet{name='Rex', age=2}
-Pet{name='Archi', age=3}
+objects.Pet{name='Fiona', age=1}
+objects.Pet{name='Rex', age=2}
+objects.Pet{name='Archi', age=3}
 
 Young Pets:
-Pet{name='Fiona', age=1}
-Pet{name='Rex', age=2}
+objects.Pet{name='Fiona', age=1}
+objects.Pet{name='Rex', age=2}
 
-Adopter Information:
-Adopter{name='Amina', city='Karaganda'}
+objects.Adopter Information:
+objects.Adopter{name='Amina', city='Karaganda'}
 
-Shelter Information:
-Shelter{name='Happy Tails', address='Astana'}
+objects.Shelter Information:
+objects.Shelter{name='Happy Tails', address='Astana'}
 
 Sounds:
 Woof
@@ -92,7 +92,7 @@ Filtering
 Young pets (age <= 2 years) are filtered into a separate list for easier adoption management.
 
 Polymorphism
-Different pet types can make their specific sounds through the Soundable interface implementation.
+Different pet types can make their specific sounds through the objects.Soundable interface implementation.
 
 Author
 Group: SE-2507
